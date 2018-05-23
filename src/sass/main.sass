@@ -3,8 +3,55 @@
 @import "libs"
 
 /*==========  user style  ==========*/
-.test
-	color: #000
+body
+	color: #ffffff
+	font-family: $default-font
+a
+	&:link
+		color: $color-text
+	&:visited
+		color: $color-text
+	&:hover
+		color: $color-text
+		text-decoration: none
+	&:active
+		color: $color-text
+
+header
+	padding: 30px 0
+.logo
+	width: 130px
+	img
+		width: 100%
+.top-nav
+	color: $color-text
+	font-size: 18px
+	ul
+		list-style: none
+		margin: 0
+		padding: 0
+		li:not(:first-child)
+			margin-left: 35px
+		a
+			display: block
+			&:hover
+				background: linear-gradient(to right,$color-1, $color-2)
+				-webkit-background-clip: text
+				-webkit-text-fill-color: transparent
+
+.contact-info
+	.phone
+		font-weight: bold
+	.social
+		color: $color-1
+		list-style: none
+		margin: 0
+		padding: 0
+		font-size: 18px
+		li
+			margin-left: 18px
+		a
+			color: inherit
 /*==========  user style  ==========*/
 
 @import "media" // Always at the end

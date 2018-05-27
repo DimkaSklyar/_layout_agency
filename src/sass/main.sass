@@ -4,7 +4,7 @@
 
 /*==========  user style  ==========*/
 body
-	color: #ffffff
+	background-color: #ffffff
 	font-family: $default-font
 a
 	&:link
@@ -17,8 +17,52 @@ a
 	&:active
 		color: $color-text
 
+.container
+	padding-left: 0 !important
+	padding-right: 0 !important	
+
+h2
+	font-size: 2.1em
+	font-weight: 900
+p
+	color: $color-h
+
+.hidden-section
+	opacity: 0
+.visible-section
+	opacity: 1
+
+
+a.btn, button.btn
+	border-radius: 30px
+	background: linear-gradient(to right,$color-1, $color-2,$color-2, $color-1)
+	display: inline-block
+	font-weight: normal
+	font-size: 16px
+	color: #ffffff
+	padding: 15px 60px 15px 40px
+	transition: .3s
+	position: relative
+	background-size: 200% 200%
+	outline: none 0
+	border: none
+	cursor: pointer
+	animation: buttonGradient .7s infinite
+	animation-play-state: paused
+	&:hover
+		animation: buttonGradient .7s infinite
+		animation-play-state: running
+		box-shadow: 0 0 30px 5px rgba(204, 204, 204, 0.95)
+		transform: scale(1.05)
+	&::after
+		position: relative
+		font-family: FontAwesome
+		right: -25px
+		font-size: 1.1em
+
+
 header
-	padding: 30px 0
+	padding: 30px 0 0
 	.navigation
 		position: relative
 		z-index: 999999
@@ -26,8 +70,7 @@ header
 	width: 130px
 	img
 		width: 100%
-.top-nav
-	color: $color-text
+.menu
 	font-size: 18px
 	ul
 		list-style: none
@@ -35,12 +78,14 @@ header
 		padding: 0
 		li:not(:first-child)
 			margin-left: 35px
-		a
-			display: block
-			&:hover
-				background: linear-gradient(to right,$color-1, $color-2)
-				-webkit-background-clip: text
-				-webkit-text-fill-color: transparent
+.top-nav
+	color: $color-text
+	a
+		display: block
+		&:hover
+			background: linear-gradient(to right,$color-1, $color-2)
+			-webkit-background-clip: text
+			-webkit-text-fill-color: transparent
 
 .contact-info
 	.phone
@@ -84,11 +129,327 @@ header
 			font-size: 1.9em
 		h1,p
 			font-weight: 800
+
+.about-us
+	padding: 80px 0 30px
+	.container
+		border-bottom: 4px solid #efefef
+		padding-bottom: 100px
+	.decor-section-about
+		background: #fff url('../img/about-us-section.png') no-repeat 0 50%
+		height: 108%
+		position: relative
+		left: -50px
+		background-size: 100%
+		z-index: 1
+	&-description
+		text-align: right
+		p
+			position: relative
+			background-color: #fff
+			margin-left: 50px
+			line-height: 2.1
+			margin-top: 50px
+			&::before
+				content: ''
+				position: absolute
+				top: 18px
+				left: -44px
+				bottom: 0
+				right: 6px
+				outline: 6px solid #efefef
+				z-index: -1
+		a
+			margin-top: 25px
+			&::after
+				content: '\f061'
+
+.service
+	padding: 30px 0
+	position: relative
+	&-description
+		line-height: 2
+	&-items
+		.service-item
+			width: 90px
+			height: 90px
+			border-radius: 50%
+			border: 1px solid #d828b8
+			margin: 0 auto
+			position: relative
+			margin-bottom: 25px
+			&::after
+				position: absolute
+				content: ''
+				width: 10px
+				height: 10px
+				border-radius: 50%
+				background-color: #d828b8
+				bottom: -20px
+				left: 50%
+				transform: translateX(-50%)
+		.service-item-name
+			text-align: center
+			width: 75%
+			margin: 0 auto
+			margin-bottom: 45px
+			font-weight: 800
+		.item-1
+			background: url('../img/icons/objective.png') no-repeat 50% 50%
+			background-size: 65%
+			background-position: 50% 50%
+		.item-2
+			background: url('../img/icons/network.png') no-repeat 50% 50%
+			background-size: 65%
+			background-position: 50% 50%
+		.item-3
+			background: url('../img/icons/group.png') no-repeat 50% 50%
+			background-size: 65%
+			background-position: 50% 50%
+		.item-4
+			background: url('../img/icons/profits.png') no-repeat 50% 50%
+			background-size: 65%
+			background-position: 50% 50%
+		.item-5
+			background: url('../img/icons/tools.png') no-repeat 50% 50%
+			background-size: 65%
+			background-position: 50% 50%
+		.item-6
+			background: url('../img/icons/seo.png') no-repeat 50% 50%
+			background-size: 65%
+			background-position: 50% 50%
+	&-decor-section
+		background: #fff url('../img/service-section.png') no-repeat 0 50%
+		width: 100%
+		height: 100%
+		position: relative
+		right: -50px
+		background-size: 100%
+		z-index: 1
+	.btn
+		&::after
+			content: '\f061'
+	.container
+		border-bottom: 6px solid #efefef
+		padding-bottom: 70px
+
+.portfolio
+	&-description
+		text-align: right
+		line-height: 2
+	&-item
+		height: 300px
+		background: red
+		margin-top: 30px
+		outline: 3px solid #ffffff
+		outline-offset: -20px
+		transition: .2s ease
+		p
+			padding: 40px 50px
+			font-size: 2em
+			font-weight: 900
+			color: #ffffff
+		&-1
+			background: #ffffff url('../img/portfolio-image-1.png') no-repeat
+			background-size: cover
+		&-2
+			background: #ffffff url('../img/portfolio-image-2.png') no-repeat
+			background-size: cover
+		&-3
+			background: #ffffff url('../img/portfolio-image-3.png') no-repeat
+			background-size: cover
+		&-4
+			background: #ffffff url('../img/portfolio-image-4.png') no-repeat
+			background-size: cover
+		&-5
+			background: #ffffff url('../img/portfolio-image-5.png') no-repeat
+			background-size: cover
+		&-6
+			background: #ffffff url('../img/portfolio-image-6.png') no-repeat
+			background-size: cover
+			height: 630px
+	&-content
+		margin-bottom: 80px
+.align-right
+	text-align: right
+	.btn
+		padding-left: 100px
+		padding-right: 40px
+		&::before
+			content: ''
+			position: absolute
+			background: url(../img/icons/more.png) no-repeat
+			width: 45px
+			height: 35px
+			left: 40px
+			top: 9%
+			background-size: cover
+
+
+
+.opinion
+	padding: 100px 0
+	.container
+		border-bottom: 4px solid #efefef
+		padding-bottom: 100px
+	h2
+		position: relative
+		line-height: 0.8em
+		&::after
+			position: absolute
+			content: ''
+			width: 50%
+			height: 1px
+			background-color: #e3e3e3
+			bottom: 0
+			right: 0
+			z-index: -1
+	.quot
+		margin-top: 100px
+		font-size: 14px
+		&-human
+			figure
+				border-radius: 50%
+				overflow: hidden
+				width: 100px
+				height: 100px
+				img
+					width: 100%
+			&-name
+				text-align: center
+				font-weight: bold
+		&-comment
+			background-color: #f7f7f7
+			border-left: 4px solid #de4bc6
+			padding: 20px 25px 5px
+			line-height: 1.7
+			margin-right: 
+			p
+				color: #96a9bb
+.me-offset-30
+	margin-right: 25px
+	margin-left: 10px
+
+.feedback
+	padding-bottom: 60px
+	&-wrapper, .address-wrapper
+		margin-top: 50px
+	form
+		textarea,input
+			width: 95%
+			outline: none 0
+			border: none
+			border-bottom: 1px solid #cccccc
+			margin-bottom: 45px
+			font-size: 1.1em
+			transition: .4s
+		input
+			&:valid + label, &:focus + label
+				transform: translateY(-90px)
+				font-size: .5em
+		textarea
+			&:valid + label, &:focus + label
+				font-size: .5em
+				transform: translateY(-96px)
+		label
+			position: absolute
+			transform: translateY(-67px)
+			font-size: 13px
+			color: #5b646e
+			display: block
+			transition: .4s
+		label:last-of-type
+			transform: translateY(-73px)
+	&-social
+		list-style: none
+		padding: 0
+		margin: 0
+		li
+			margin-left: auto
+			color: #cccccc
+			padding-bottom: 10px
+			a
+				color: inherit
+				font-size: 1.9em
+				display: block
+				transition: .3s
+				&:hover
+					color: $color-1
+					transform: scale(1.5)
+	.btn
+		padding-left: 100px
+		padding-right: 50px
+		font-family: MontserratAlternates,sans-serif
+		&::before
+			content: '\f1d9'
+			position: absolute
+			font-family: FontAwesome
+			left: 40px
+			font-size: 1.5em
+			top: 50%
+			transform: translateY(-50%)
+	.address
+		list-style: none
+		padding: 0
+		margin: 0
+		li
+			margin-bottom: 20px
+			p
+				font-weight: 700
+		.fa
+			color: $color-1
+			margin-right: 15px
+			font-size: 18px
+			width: 18px
+			text-align: center
+
+.page-footer
+	background: url('../img/bg-footer.png') no-repeat
+	background-size: cover
+	padding-top: 230px
+	.navigation
+		padding-bottom: 50px
+	.bottom-nav
+		a
+			color: #ffffff
+	.contact-info
+		a
+			color: #ffffff
+
+
+
+
+
+@keyframes buttonGradient
+	0%
+		background-position: 0 50%
+	25%
+		background-position: 50% 50%
+	50%
+		background-position: 100% 50%
+	75%
+		background-position: 150% 50%
+	100%
+		background-position: 200% 50%
 /*==========  user style  ==========*/
 
 /*==========  custom style  ==========*/
-
-
+.owl-nav
+	position: absolute
+	top: -37px
+	right: 0
+	padding-left: 25px
+	background: #fff
+	button
+		width: 30px
+		height: 30px
+		box-shadow: inset 0 0 2px 1px #cccccc
+		span
+			font-size: 2em
+			line-height: 25px
+			color: #cccccc
+	.owl-prev
+		margin-right: 5px
 /*==========  custom style  ==========*/
 
 @import "media" // Always at the end

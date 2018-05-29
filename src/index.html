@@ -15,14 +15,28 @@
 		<div class="navigation">
 			<div class="container">
 				<div class="row no-gutters align-items-baseline">
-					<div class="col-2">
+					<!-- mobile menu -->
+					<div class="col-xs-3 col-sm-3 col-3 mobile-menu-wrapper">
+						<a href="#" id="touch-menu">
+							<div id="nav-icon2">
+								<span></span>
+								<span></span>
+								<span></span>
+								<span></span>
+								<span></span>
+								<span></span>
+							</div>
+						</a>
+					</div>
+					<!-- mobile menu -->
+					<div class="col-lg-2 col-md-12 col-sm-9 col-9">
 						<a href="index.html">
 							<div class="logo"><img src="img/logo.png" alt=""></div>
 						</a>
 					</div>
-					<div class="col-7">
+					<div class="col-xl-7 col-lg-6 col-md-12 d-md-flex">
 						<nav class="menu top-nav">
-							<ul class="d-flex">
+							<ul class="d-flex flex-column flex-md-row">
 								<li><a href="index.html">Главная</a></li>
 								<li><a href="about.html">О нас</a></li>
 								<li><a href="service.html">Услуги</a></li>
@@ -31,10 +45,10 @@
 							</ul>
 						</nav>
 					</div>
-					<div class="col-3">
-						<div class="contact-info d-flex align-items-baseline">
+					<div class="col-xl-3 col-lg-4 col-md-12">
+						<div class="contact-info d-flex align-items-baseline justify-content-md-around justify-content-between">
 							<a href="tel:+78612174813" class="phone">+7 (861) 217-48-13</a>
-							<ul class="social d-flex">
+							<ul class="social d-sm-flex d-none">
 								<li><a href=""><i class="fa fa-facebook-square" aria-hidden="true"></i></a></li>
 								<li><a href=""><i class="fa fa-youtube-square" aria-hidden="true"></i></a></li>
 								<li><a href=""><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
@@ -63,10 +77,10 @@
 		<section class="about-us">
 			<div class="container">
 				<div class="row no-gutters">
-					<div class="col-6">
+					<div class="col-6 d-none d-lg-block">
 						<div class="decor-section-about"></div>
 					</div>
-					<div class="col-6">
+					<div class="col-lg-6 col-12">
 						<div class="about-us-description">
 							<h2>Коротко о Нас</h2>
 							<p>Рекламное агентство “3POINTS” начало свою деятельность в 2002 году как Северо-Кавказский филиал одного из ведущих маркетинговых агентств России. За долгие годы работы команда набиралась опыта и расширяла свои знания, а портфолио реализованных проектов пополнялось большим разнообразием выполненных заказов.</p>
@@ -80,37 +94,37 @@
 		<section class="service">
 			<div class="container">
 				<div class="row no-gutters">
-					<div class="col-6">
+					<div class="col-lg-6 col-12" id="service-animate">
 						<div class="service-description">
 							<h2>Наши услуги</h2>
 							<p>Мы стремимся найти индивидуальный подход к каждому клиенту и всегда открыты к любым проектам. От простых до самых смелых и невозможных идей.</p>
 						</div>
 						<div class="service-items row no-gutters">
-							<div class="col-4">
+							<div class="col-sm-4 col-12">
 								<div class="service-item item-1"></div>
 								<p class="service-item-name">Promotion</p>
 							</div>
-							<div class="col-4">
+							<div class="col-sm-4 col-12">
 								<div class="service-item item-2">
 								</div>
 								<p class="service-item-name">Merchandising</p>
 							</div>
-							<div class="col-4">
+							<div class="col-sm-4 col-12">
 								<div class="service-item item-3">
 								</div>
 								<p class="service-item-name">Events</p>
 							</div>
-							<div class="col-4">
+							<div class="col-sm-4 col-12">
 								<div class="service-item item-4">
 								</div>
 								<p class="service-item-name">Trade Promotion</p>
 							</div>
-							<div class="col-4">
+							<div class="col-sm-4 col-12">
 								<div class="service-item item-5">
 								</div>
 								<p class="service-item-name">Direct Marketing</p>
 							</div>
-							<div class="col-4">
+							<div class="col-sm-4 col-12">
 								<div class="service-item item-6">
 								</div>
 								<p class="service-item-name">SEO</p>
@@ -118,7 +132,7 @@
 							<a href="#" class="btn">Читать далее... </a>
 						</div>
 					</div>
-					<div class="col-6">
+					<div class="col-6 d-none d-lg-block">
 						<div class="service-decor-section"></div>
 					</div>
 				</div>
@@ -128,50 +142,50 @@
 		<section class="portfolio">
 			<div class="container">
 				<div class="row no-gutters justify-content-between">
-					<div class="col-2">
+					<div class="col-2 d-none d-sm-block">
 						<a href="index.html">
 							<div class="logo"><img src="img/logo.png" alt=""></div>
 						</a>
 					</div>
-					<div class="col-7">
+					<div class="col-lg-7 col-sm-9 col-12">
 						<div class="portfolio-description">
 							<h2>Портфолио</h2>
 							<p>Наш опыт – это безграничное число промо-акций с разнообразными механиками, яркие мероприятия и праздники ведущих брендов. </p>
 						</div>
 					</div>
-					<div class="col-12">
-						<div class="row portfolio-content">
-							<div class="col-12 align-items-stretch">
+					<div class="col-12 ">
+						<div class="row portfolio-content gutter-10-md">
+							<div class="col-12 align-items-stretch gutter-10-md">
 								<a href="#" class="portfolio-href">
 									<div class="portfolio-item portfolio-item-1">
 										<p>2018</p>
 									</div>
 								</a>
 							</div>
-							<div class="col-8">
+							<div class="col-md-8 col-12">
 								<div class="row">
-									<div class="col-6">
+									<div class="col-sm-6 col-12 gutter-10-md">
 										<a href="#" class="portfolio-href">
 											<div class="portfolio-item portfolio-item-2">
 												<p>2017</p>
 											</div>
 										</a>
 									</div>
-									<div class="col-6">
+									<div class="col-sm-6 col-12 gutter-10-md">
 										<a href="#" class="portfolio-href">
 											<div class="portfolio-item portfolio-item-3">
 												<p>2016</p>
 											</div>
 										</a>
 									</div>
-									<div class="col-6">
+									<div class="col-sm-6 col-12 gutter-10-md">
 										<a href="#" class="portfolio-href">
 											<div class="portfolio-item portfolio-item-4">
 												<p>2015</p>
 											</div>
 										</a>
 									</div>
-									<div class="col-6">
+									<div class="col-sm-6 col-12 gutter-10-md">
 										<a href="#" class="portfolio-href">
 											<div class="portfolio-item portfolio-item-5">
 												<p>2014</p>
@@ -180,7 +194,7 @@
 									</div>
 								</div>
 							</div>
-							<div class="col-4 align-items-stretch">
+							<div class="col-md-4 col-12 align-items-stretch gutter-10-md">
 								<a href="#" class="portfolio-href">
 									<div class="portfolio-item portfolio-item-6">
 										<p>2013</p>
@@ -189,10 +203,10 @@
 							</div>
 						</div>
 					</div>
-					<div class="col-7">
+					<div class="col-md-7 col-12">
 						<p>В совокупности, мы семья, с самой большой зависимостью – любовь к BTL.  Мы хотим, чтобы вас узнавали, и в небе и на земле!</p>
 					</div>
-					<div class="col-3 align-right">
+					<div class="col-md-5 col-12 align-right">
 						<a href="#" class="btn">Показать всё...</a>
 					</div>
 				</div>
@@ -202,9 +216,9 @@
 		<section class="opinion">
 			<div class="container">
 				<h2>Отзывы о Нас</h2>
-				<div class="row no-gutters justify-content-between owl-carousel">
+				<div class="row no-gutters justify-content-between owl-carousel owl-carousel-1">
 					<div class="col">
-						<div class="row no-gutters quot align-items-start justify-content-around">
+						<div class="row no-gutters quot">
 							<div class="col-2 me-offset-30">
 								<div class="quot-human">
 									<figure>
@@ -213,7 +227,7 @@
 									<p class="quot-human-name">@Instagram</p>
 								</div>
 							</div>
-							<div class="col-9">
+							<div class="col-xl-9 col-lg-12">
 								<div class="quot-comment">
 									<p>В своем стремлении повысить качество жизни, они забывают, что сложившаяся структура организации является качественно новой ступенью поэтапного и последовательного </p>
 								</div>
@@ -221,7 +235,7 @@
 						</div>
 					</div>
 					<div class="col">
-						<div class="row no-gutters quot align-items-start  justify-content-around">
+						<div class="row no-gutters quot">
 							<div class="col-2 me-offset-30">
 								<div class="quot-human">
 									<figure>
@@ -230,7 +244,7 @@
 									<p class="quot-human-name">@Instagram</p>
 								</div>
 							</div>
-							<div class="col-9">
+							<div class="col-xl-9 col-lg-12">
 								<div class="quot-comment">
 									<p>В своем стремлении повысить качество жизни, они забывают, что сложившаяся структура организации является качественно новой ступенью поэтапного и последовательного </p>
 								</div>
@@ -238,7 +252,7 @@
 						</div>
 					</div>
 					<div class="col">
-						<div class="row no-gutters quot align-items-start  justify-content-around">
+						<div class="row no-gutters quot">
 							<div class="col-2 me-offset-30">
 								<div class="quot-human">
 									<figure>
@@ -247,7 +261,7 @@
 									<p class="quot-human-name">@Instagram</p>
 								</div>
 							</div>
-							<div class="col-9">
+							<div class="col-xl-9 col-lg-12">
 								<div class="quot-comment">
 									<p>В своем стремлении повысить качество жизни, они забывают, что сложившаяся структура организации является качественно новой ступенью поэтапного и последовательного </p>
 								</div>
@@ -262,7 +276,7 @@
 			<div class="container">
 				<h2>Напишите нам!</h2>
 				<div class="row no-gutters">
-					<div class="col-5">
+					<div class="col-xl-5 col-lg-6">
 						<div class="row no-gutters feedback-wrapper">
 							<div class="col-11">
 								<form action="" method="post" id="feedback-form">
@@ -287,7 +301,7 @@
 							</div>
 						</div>
 					</div>
-					<div class="col-4 offset-3 address-wrapper">
+					<div class="col-lg-4 offset-xl-3 offset-lg-2 address-wrapper">
 						<ul class="address">
 							<li class="d-flex align-items-baseline">
 								<i class="fa fa-phone" aria-hidden="true"></i>
@@ -311,14 +325,14 @@
 		<div class="navigation">
 			<div class="container">
 				<div class="row no-gutters align-items-baseline">
-					<div class="col-2">
+					<div class="col-lg-2 col-md-12">
 						<a href="index.html">
-							<div class="logo"><img src="img/logo.png" alt=""></div>
+							<div class="logo logo-bottom"><img src="img/logo.png" alt=""></div>
 						</a>
 					</div>
-					<div class="col-7">
+					<div class="col-xl-7 col-lg-6 col-md-12 d-md-flex">
 						<nav class="menu bottom-nav">
-							<ul class="d-flex">
+							<ul class="d-flex flex-column flex-md-row">
 								<li><a href="index.html">Главная</a></li>
 								<li><a href="about.html">О нас</a></li>
 								<li><a href="service.html">Услуги</a></li>
@@ -327,10 +341,10 @@
 							</ul>
 						</nav>
 					</div>
-					<div class="col-3">
-						<div class="contact-info d-flex align-items-baseline">
+					<div class="col-xl-3 col-lg-4 col-md-12">
+						<div class="contact-info d-flex align-items-baseline justify-content-md-around flex-column flex-md-row">
 							<a href="tel:+78612174813" class="phone">+7 (861) 217-48-13</a>
-							<ul class="social d-flex">
+							<ul class="social d-flex social-bottom">
 								<li><a href=""><i class="fa fa-facebook-square" aria-hidden="true"></i></a></li>
 								<li><a href=""><i class="fa fa-youtube-square" aria-hidden="true"></i></a></li>
 								<li><a href=""><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
@@ -343,7 +357,6 @@
 		</div>
 	</footer>
 	<script src="js/scripts.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.5/waypoints.min.js"></script>
 </body>
 
 </html>

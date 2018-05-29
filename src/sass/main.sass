@@ -6,6 +6,7 @@
 body
 	background-color: #ffffff
 	font-family: $default-font
+	overflow-x: none
 a
 	&:link
 		color: $color-text
@@ -32,6 +33,17 @@ p
 .visible-section
 	opacity: 1
 
+section
+	+media-breakpoint-down(lg)
+		padding-left: 15px !important
+		padding-right: 15px !important
+main
+	overflow: hidden
+.mobile-menu-wrapper
+	display: none
+	margin: auto
+	+media-breakpoint-down(sm)
+		display: block
 
 a.btn, button.btn
 	border-radius: 30px
@@ -63,23 +75,49 @@ a.btn, button.btn
 
 header
 	padding: 30px 0 0
+	+media-breakpoint-down(sm)
+		padding: 10px 0 30px
+	+media-breakpoint-down(lg)
+		padding-left: 15px !important
+		padding-right: 15px !important
 	.navigation
 		position: relative
 		z-index: 999999
 .logo
 	width: 130px
+	+media-breakpoint-down(md)
+		margin: 0 auto
+	+media-breakpoint-down(sm)
+		margin: 0 0 0 auto 
 	img
 		width: 100%
 .menu
 	font-size: 18px
+	+media-breakpoint-down(lg)
+		font-size: 16px
 	ul
 		list-style: none
 		margin: 0
 		padding: 0
 		li:not(:first-child)
 			margin-left: 35px
+			+media-breakpoint-down(lg)
+				margin-left: 20px
+			+media-breakpoint-down(sm)
+				margin-left: 0
+		li
+			+media-breakpoint-down(sm)
+				margin-bottom: 10px
+				padding-bottom: 10px
+				border-bottom: 1px solid #cccccc
+		li:last-child
+			margin-bottom: 0
 .top-nav
 	color: $color-text
+	+media-breakpoint-down(md)
+		margin: 15px auto
+	+media-breakpoint-down(sm)
+		display: none
 	a
 		display: block
 		&:hover
@@ -88,15 +126,21 @@ header
 			-webkit-text-fill-color: transparent
 
 .contact-info
+	+media-breakpoint-down(sm)
+		margin-top: 10px
 	.phone
 		font-weight: bold
+		+media-breakpoint-down(sm)
+			font-size: 20px
 	.social
 		color: $color-1
 		list-style: none
 		margin: 0
 		padding: 0
 		font-size: 18px
-		li
+		+media-breakpoint-down(sm)
+			font-size: 24px
+		li:not(:first-child)
 			margin-left: 18px
 		i
 			transition: .2s
@@ -104,12 +148,19 @@ header
 			color: inherit
 			&:hover i
 				transform: scale(1.2)
+		&-bottom
+			margin-top: 15px
+			font-size: 18px
+			+media-breakpoint-down(sm)
+				font-size: 30px
 
 .company-name
-	background: #fff url('../img/slider-1.png') no-repeat
+	background: #fff url('../img/slider-1.png') no-repeat 50% 50%
 	background-size: cover
 	height: 100vh
 	margin-top: -50px
+	+media-breakpoint-down(lg)
+		min-height: 550px
 	.container
 		height: inherit
 		.row
@@ -118,6 +169,11 @@ header
 		text-align: center
 		flex: 1
 		text-transform: uppercase
+		font-size: 16px
+		+media-breakpoint-down(lg)
+			font-size: 12px
+		+media-breakpoint-down(xs)
+			font-size: 9px
 		h1
 			background: linear-gradient(to right,$color-1, $color-2)
 			-webkit-background-clip: text
@@ -132,9 +188,13 @@ header
 
 .about-us
 	padding: 80px 0 30px
+	+media-breakpoint-down(xs)
+		padding: 0 0 0
 	.container
 		border-bottom: 4px solid #efefef
 		padding-bottom: 100px
+		+media-breakpoint-down(xs)
+			padding-bottom: 60px
 	.decor-section-about
 		background: #fff url('../img/about-us-section.png') no-repeat 0 50%
 		height: 108%
@@ -178,6 +238,9 @@ header
 			margin: 0 auto
 			position: relative
 			margin-bottom: 25px
+			+media-breakpoint-down(xs)
+				width: 170px
+				height: 170px
 			&::after
 				position: absolute
 				content: ''
@@ -222,10 +285,12 @@ header
 		background: #fff url('../img/service-section.png') no-repeat 0 50%
 		width: 100%
 		height: 100%
-		position: relative
-		right: -50px
+		position: absolute
+		right: -10%
 		background-size: 100%
 		z-index: 1
+		+media-breakpoint-down(lg)
+			right: 0
 	.btn
 		&::after
 			content: '\f061'
@@ -239,16 +304,20 @@ header
 		line-height: 2
 	&-item
 		height: 300px
-		background: red
 		margin-top: 30px
 		outline: 3px solid #ffffff
 		outline-offset: -20px
 		transition: .2s ease
+		+media-breakpoint-down(md)
+			height: 210px
+			margin-top: 20px
 		p
 			padding: 40px 50px
 			font-size: 2em
 			font-weight: 900
 			color: #ffffff
+			+media-breakpoint-down(md)
+				padding: 25px 35px
 		&-1
 			background: #ffffff url('../img/portfolio-image-1.png') no-repeat
 			background-size: cover
@@ -268,8 +337,18 @@ header
 			background: #ffffff url('../img/portfolio-image-6.png') no-repeat
 			background-size: cover
 			height: 630px
+			+media-breakpoint-down(md)
+				height: 435px
+			+media-breakpoint-down(sm)
+				height: 210px
 	&-content
 		margin-bottom: 80px
+		+media-breakpoint-down(sm)
+			margin-bottom: 30px
+	.gutter-10-md
+		+media-breakpoint-down(md)
+			padding-left: 10px
+			padding-right: 10px
 .align-right
 	text-align: right
 	.btn
@@ -287,11 +366,14 @@ header
 
 
 
+
 .opinion
 	padding: 100px 0
 	.container
 		border-bottom: 4px solid #efefef
 		padding-bottom: 100px
+		+media-breakpoint-down(lg)
+			padding-bottom: 40px
 	h2
 		position: relative
 		line-height: 0.8em
@@ -304,9 +386,18 @@ header
 			bottom: 0
 			right: 0
 			z-index: -1
+			+media-breakpoint-down(sm)
+				display: none
 	.quot
 		margin-top: 100px
 		font-size: 14px
+		align-items: flex-start
+		justify-content: space-around
+		+media-breakpoint-down(lg)
+			flex-direction: column
+			align-items: center
+			justify-content: center
+			margin-top: 50px
 		&-human
 			figure
 				border-radius: 50%
@@ -332,6 +423,8 @@ header
 
 .feedback
 	padding-bottom: 60px
+	+media-breakpoint-down(md)
+		padding-bottom: 0
 	&-wrapper, .address-wrapper
 		margin-top: 50px
 	form
@@ -407,9 +500,19 @@ header
 	background: url('../img/bg-footer.png') no-repeat
 	background-size: cover
 	padding-top: 230px
+	+media-breakpoint-down(md)
+		padding-top: 100px
+	+media-breakpoint-down(sm)
+		padding-left: 15px
+		padding-right: 15px
 	.navigation
 		padding-bottom: 50px
 	.bottom-nav
+		+media-breakpoint-down(md)
+			margin: 15px auto
+		li
+			+media-breakpoint-down(sm)
+				border: none
 		a
 			color: #ffffff
 	.contact-info
@@ -417,7 +520,11 @@ header
 			color: #ffffff
 
 
-
+.logo-bottom
+	+media-breakpoint-down(sm)
+		margin: 0
+	li
+		border: none
 
 
 @keyframes buttonGradient

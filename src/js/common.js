@@ -8,16 +8,16 @@ $(document).ready(function () {
 		}
 	});
 	
-	$('.owl-carousel').owlCarousel({
+	$('.owl-carousel-1').owlCarousel({
 		responsiveClass:true,
 		responsive:{
 			0:{
 				items:1,
-				nav:true
-			},
-			600:{
-				items:3,
 				nav:false
+			},
+			768:{
+				items:2,
+				nav:true
 			},
 			1000:{
 				items:2,
@@ -26,29 +26,38 @@ $(document).ready(function () {
 			}
 		}
 	})
+
 	
-$('.service-items').animated('fadeIn','fadeOut');
+	
+	// var windowHeight = $(window).height();
+	// $(document).on('scroll', function() {
+	// 	$('#service-animate').each(function() {
+	// 		var self = $(this),
+	// 		height = self.offset().top;
+	// 		if ($(document).scrollTop() + windowHeight >= height) {
+	// 			self.addClass('fadeInLeft').css({'animation-duration':'2s'})
+	// 		}
+	// 	});
+	// });
+	
+	
+	// mobile menu
+	var touch = $('#touch-menu');
+	var menu = $('.top-nav');
+	
+	$(touch).on('click', function(e) {
+		e.preventDefault();
+		menu.slideToggle();
+	});
+	$(window).resize(function(){
+		var w = $(window).width();
+		if(w > 760 && menu.is(':hidden')) {
+			menu.removeAttr('style');
+		}
+	});
+
+	$('#nav-icon2').click(function(){
+		$(this).toggleClass('open');
+	});
 
 });
-
-(function($) {
-		$.fn.animated = function(inEffect, outEffect) {
-				$(this).css("opacity", "0").addClass("animated").waypoint(function(dir) {
-						if (dir === "down") {
-								$(this).removeClass(outEffect).addClass(inEffect).css("opacity", "1");
-						} else {
-								$(this).removeClass(inEffect).addClass(outEffect).css("opacity", "1");
-						};
-				}, {
-						offset: "80%"
-				}).waypoint(function(dir) {
-						if (dir === "down") {
-								$(this).removeClass(inEffect).addClass(outEffect).css("opacity", "1");
-						} else {
-								$(this).removeClass(outEffect).addClass(inEffect).css("opacity", "1");
-						};
-				}, {
-						offset: -$(window).height()
-				});
-		};
-})(jQuery);

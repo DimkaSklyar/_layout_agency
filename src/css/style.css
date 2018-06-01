@@ -297,7 +297,7 @@ html {
 
 html {
   -ms-overflow-style: scrollbar;
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-tap-highlight-color: transparent;
 }
 
 body {
@@ -5982,7 +5982,7 @@ html {
   bottom: 0px;
   left: 0px;
   display: none;
-  background: linear-gradient(rgba(0, 0, 0, 0), black);
+  background: linear-gradient(transparent, black);
   width: 100%;
 }
 
@@ -10369,6 +10369,132 @@ html {
   top: 29px;
 }
 
+.portfolio-item:hover {
+  box-shadow: 0 5px 35px 0px rgba(0, 0, 0, 0.1);
+  background: linear-gradient(to bottom, #ffe4e4, #ff6bd9);
+}
+
+.portfolio-item:hover .hov-scale-fix {
+  transform: scale(1.05);
+}
+
+.portfolio-item:hover p {
+  color: #fff;
+  border: 4px solid #ffffff;
+}
+
+.portfolio-item:hover:before,
+.portfolio-item:hover:after {
+  display: block;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #fda8cf;
+  border-radius: 75px;
+  z-index: -1;
+  animation: 1s clockwise infinite;
+}
+
+.portfolio-item:hover:after {
+  background: #f3ce5e;
+  animation: 2s counterclockwise infinite;
+}
+
+@keyframes clockwise {
+  0% {
+    top: -5px;
+    left: 0;
+  }
+
+  12% {
+    top: -2px;
+    left: 2px;
+  }
+
+  25% {
+    top: 0;
+    left: 5px;
+  }
+
+  37% {
+    top: 2px;
+    left: 2px;
+  }
+
+  50% {
+    top: 5px;
+    left: 0;
+  }
+
+  62% {
+    top: 2px;
+    left: -2px;
+  }
+
+  75% {
+    top: 0;
+    left: -5px;
+  }
+
+  87% {
+    top: -2px;
+    left: -2px;
+  }
+
+  100% {
+    top: -5px;
+    left: 0;
+  }
+}
+
+@keyframes counterclockwise {
+  0% {
+    top: -5px;
+    right: 0;
+  }
+
+  12% {
+    top: -2px;
+    right: 2px;
+  }
+
+  25% {
+    top: 0;
+    right: 5px;
+  }
+
+  37% {
+    top: 2px;
+    right: 2px;
+  }
+
+  50% {
+    top: 5px;
+    right: 0;
+  }
+
+  62% {
+    top: 2px;
+    right: -2px;
+  }
+
+  75% {
+    top: 0;
+    right: -5px;
+  }
+
+  87% {
+    top: -2px;
+    right: -2px;
+  }
+
+  100% {
+    top: -5px;
+    right: 0;
+  }
+}
+
 /*==========  user style  ==========*/
 body {
   background-color: #ffffff;
@@ -10396,6 +10522,10 @@ a:active {
 .container {
   padding-left: 0 !important;
   padding-right: 0 !important;
+}
+
+.r-a {
+  text-align: right;
 }
 
 h2 {
@@ -10455,6 +10585,12 @@ a.btn, button.btn {
   animation-play-state: paused;
 }
 
+@media (max-width: 991px) {
+  a.btn, button.btn {
+    padding: 15px 55px 15px 40px;
+  }
+}
+
 a.btn:hover, button.btn:hover {
   animation: buttonGradient .7s infinite;
   animation-play-state: running;
@@ -10489,6 +10625,10 @@ header {
 header .navigation {
   position: relative;
   z-index: 999999;
+}
+
+header.other-page {
+  padding: 30px 0;
 }
 
 .logo {
@@ -10871,9 +11011,10 @@ header .navigation {
 .portfolio-item {
   height: 300px;
   margin-top: 30px;
-  outline: 3px solid #ffffff;
-  outline-offset: -20px;
-  transition: .2s ease;
+  transition: .5s ease;
+  position: relative;
+  border-radius: 75px;
+  display: flex;
 }
 
 @media (max-width: 991px) {
@@ -10884,10 +11025,15 @@ header .navigation {
 }
 
 .portfolio-item p {
-  padding: 40px 50px;
+  margin: 19px 21px;
+  padding: 15px 40px;
   font-size: 2em;
   font-weight: 900;
   color: #ffffff;
+  flex: 1;
+  border: 4px solid #ffffff;
+  border-radius: 75px;
+  transition: .5s;
 }
 
 @media (max-width: 991px) {
@@ -10899,6 +11045,7 @@ header .navigation {
 .portfolio-item-1 {
   background: #ffffff url("../img/portfolio-image-1.png") no-repeat;
   background-size: cover;
+  transition: .5s;
 }
 
 .portfolio-item-2 {
@@ -10974,6 +11121,10 @@ header .navigation {
   left: 40px;
   top: 9%;
   background-size: cover;
+}
+
+.hov-scale-fix {
+  transition: .2s;
 }
 
 .opinion {
@@ -11221,6 +11372,270 @@ header .navigation {
 
 .logo-bottom li {
   border: none;
+}
+
+.name-page {
+  background: url("../img/about-page.jpg") no-repeat 50% 50%;
+  background-size: cover;
+  position: relative;
+  padding: 10px;
+}
+
+.name-page::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(to right, rgba(199, 54, 230, 0.7), rgba(247, 0, 79, 0.7));
+}
+
+.name-page-wrap {
+  padding: 10px 0;
+  border-top: 2px solid rgba(248, 46, 111, 0.7);
+  border-bottom: 2px solid rgba(248, 46, 111, 0.9);
+}
+
+.name-page-desc {
+  padding: 100px 0;
+  text-align: center;
+  color: #ffffff;
+}
+
+.name-page-desc p {
+  color: inherit;
+  margin-top: 5px;
+}
+
+.name-page-desc h2 {
+  text-transform: uppercase;
+  position: relative;
+  display: inline-block;
+}
+
+.name-page-desc h2::before {
+  content: '';
+  position: absolute;
+  height: 2px;
+  width: 50%;
+  background-color: #fff;
+  bottom: -5px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.excerpt {
+  padding: 50px 0;
+}
+
+.excerpt-text {
+  font-size: 2em;
+  border-left: 5px solid rgba(248, 46, 111, 0.7);
+  padding-left: 30px;
+}
+
+@media (max-width: 991px) {
+  .excerpt-text {
+    font-size: 1.5em;
+  }
+}
+
+@media (max-width: 767px) {
+  .excerpt-text {
+    font-size: 1.2em;
+  }
+}
+
+@media (max-width: 575px) {
+  .excerpt-text {
+    font-size: 1em;
+  }
+}
+
+.other-page-about {
+  padding: 60px 0;
+}
+
+@media (max-width: 991px) {
+  .other-page-about {
+    padding: 0 0 30px;
+  }
+}
+
+.other-page-about-text {
+  margin-left: 15px;
+}
+
+.other-page-about-image {
+  background: url("../img/decot-about.png") no-repeat;
+  background-size: contain;
+}
+
+.presentation {
+  padding: 80px 0 120px;
+  margin-bottom: 0;
+  background: url("../img/section-video-decor.png") no-repeat, url("../img/section-video.png") no-repeat;
+  background-size: 100% 100%, cover;
+}
+
+.presentation .video-wrap {
+  text-align: center;
+  position: relative;
+}
+
+.presentation video {
+  max-width: 900px;
+  width: 100%;
+  height: 100%;
+}
+
+.presentation-video {
+  padding-bottom: 30px;
+  font-size: 3em;
+  text-align: center;
+  text-transform: uppercase;
+  background: linear-gradient(to right, #cf38ef, #f82e6f);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+@media (max-width: 767px) {
+  .presentation-video {
+    font-size: 2em;
+  }
+}
+
+.other-page-opinion {
+  padding-bottom: 0;
+}
+
+.other-page-opinion .container {
+  border: none;
+}
+
+.other-page-contact {
+  padding: 60px 0 10px;
+}
+
+.contact-info iframe {
+  height: 600px;
+}
+
+@media (max-width: 991px) {
+  .contact-info iframe {
+    height: 300px;
+  }
+}
+
+.contact-info-wrp {
+  padding: 20px !important;
+  border: 2px solid rgba(248, 46, 111, 0.7);
+}
+
+@media (max-width: 991px) {
+  .contact-info-wrp {
+    padding: 10px !important;
+  }
+}
+
+.contact-info .feedback-other-page {
+  padding: 30px 0 10px;
+}
+
+.contact-info .feedback-other-page-around {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+@media (max-width: 991px) {
+  .contact-info .feedback-other-page-around {
+    order: 2;
+  }
+}
+
+@media (max-width: 991px) {
+  .contact-info .feedback-other-page-address {
+    padding: 10px;
+  }
+}
+
+.contact-info .feedback-other-page .feedback-1 {
+  padding-left: 30px;
+}
+
+@media (max-width: 991px) {
+  .contact-info .feedback-other-page .feedback-1 {
+    padding: 10px;
+  }
+}
+
+.contact-info form textarea, .contact-info form input {
+  width: 95%;
+  outline: none 0;
+  border: none;
+  border-bottom: 1px solid #cccccc;
+  margin-bottom: 45px;
+  font-size: 1.1em;
+  transition: .4s;
+}
+
+.contact-info form input:valid + label, .contact-info form input:focus + label {
+  transform: translateY(-90px);
+  font-size: .5em;
+}
+
+.contact-info form textarea {
+  margin-top: 30px;
+}
+
+.contact-info form textarea::placeholder {
+  font-family: "MontserratAlternates", sans-serif;
+  font-size: 13px;
+  color: #5b646e;
+}
+
+.contact-info form textarea:valid + label, .contact-info form textarea:focus + label {
+  font-size: .5em;
+  transform: translateY(-96px);
+}
+
+.contact-info form label {
+  position: absolute;
+  transform: translateY(-67px);
+  font-size: 13px;
+  color: #5b646e;
+  display: block;
+  transition: .4s;
+}
+
+.contact-info form label:last-of-type {
+  transform: translateY(-73px);
+}
+
+@media (max-width: 1199px) {
+  .contact-info #messegeResult-contact-form {
+    text-align: left;
+  }
+}
+
+@media (max-width: 767px) {
+  .contact-info #messegeResult-contact-form {
+    text-align: center;
+  }
+}
+
+.contact-info .btn-feedback {
+  font-family: "MontserratAlternates", sans-serif;
+}
+
+.contact-info .btn-feedback i {
+  padding-right: 20px;
+}
+
+.contact-info .social-contacts {
+  font-size: 2em;
 }
 
 @keyframes buttonGradient {

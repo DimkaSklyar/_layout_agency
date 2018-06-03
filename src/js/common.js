@@ -26,7 +26,7 @@ $(document).ready(function () {
 			}
 		}
 	})
-
+	
 	
 	
 	// var windowHeight = $(window).height();
@@ -55,9 +55,16 @@ $(document).ready(function () {
 			menu.removeAttr('style');
 		}
 	});
-
+	
 	$('#nav-icon2').click(function(){
 		$(this).toggleClass('open');
 	});
+	
+	$('.portfolio-item').hover(function () {
+		$(this).parent().parent().addClass('hov-scale-fix');
+	}, function () {
+		$(this).parent().parent().removeClass('hov-scale-fix');
+	}
+);
 
 });

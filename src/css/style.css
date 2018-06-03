@@ -297,7 +297,7 @@ html {
 
 html {
   -ms-overflow-style: scrollbar;
-  -webkit-tap-highlight-color: transparent;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
 body {
@@ -5982,7 +5982,7 @@ html {
   bottom: 0px;
   left: 0px;
   display: none;
-  background: linear-gradient(transparent, black);
+  background: linear-gradient(rgba(0, 0, 0, 0), black);
   width: 100%;
 }
 
@@ -10370,8 +10370,8 @@ html {
 }
 
 .portfolio-item:hover {
-  box-shadow: 0 5px 35px 0px rgba(0, 0, 0, 0.1);
-  background: linear-gradient(to bottom, #ffe4e4, #ff6bd9);
+  box-shadow: 0 5px 20px 2px rgba(251, 91, 246, 0.29);
+  background: linear-gradient(to bottom, #ffccef, #fbf3f9);
 }
 
 .portfolio-item:hover .hov-scale-fix {
@@ -11011,7 +11011,7 @@ header.other-page {
 .portfolio-item {
   height: 300px;
   margin-top: 30px;
-  transition: .5s ease;
+  transition: .7s ease;
   position: relative;
   border-radius: 75px;
   display: flex;
@@ -11032,8 +11032,8 @@ header.other-page {
   color: #ffffff;
   flex: 1;
   border: 4px solid #ffffff;
-  border-radius: 75px;
-  transition: .5s;
+  border-radius: 65px;
+  transition: .7s;
 }
 
 @media (max-width: 991px) {
@@ -11074,6 +11074,10 @@ header.other-page {
   height: 630px;
 }
 
+.portfolio-item-6-page-portfolio {
+  height: 300px;
+}
+
 @media (max-width: 991px) {
   .portfolio-item-6 {
     height: 435px;
@@ -11094,6 +11098,10 @@ header.other-page {
   .portfolio-content {
     margin-bottom: 30px;
   }
+}
+
+.portfolio .gutter-10-md {
+  transition: .6s;
 }
 
 @media (max-width: 991px) {
@@ -11123,8 +11131,13 @@ header.other-page {
   background-size: cover;
 }
 
+.page-portfolio {
+  padding: 60px 0;
+}
+
 .hov-scale-fix {
-  transition: .2s;
+  transform: scale(1.02);
+  transition: .7s;
 }
 
 .opinion {
@@ -11406,6 +11419,7 @@ header.other-page {
 .name-page-desc p {
   color: inherit;
   margin-top: 5px;
+  padding: 0 5px;
 }
 
 .name-page-desc h2 {
@@ -11520,6 +11534,7 @@ header.other-page {
 
 .contact-info iframe {
   height: 600px;
+  border-radius: 15px;
 }
 
 @media (max-width: 991px) {
@@ -11531,6 +11546,7 @@ header.other-page {
 .contact-info-wrp {
   padding: 20px !important;
   border: 2px solid rgba(248, 46, 111, 0.7);
+  border-radius: 15px;
 }
 
 @media (max-width: 991px) {
@@ -11636,6 +11652,39 @@ header.other-page {
 
 .contact-info .social-contacts {
   font-size: 2em;
+}
+
+.page-service {
+  padding: 40px 0;
+}
+
+.page-service-excerpt {
+  font-size: 10px;
+}
+
+.page-service-item figure {
+  border-radius: 65px;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  display: flex;
+  width: 100%;
+}
+
+.page-service-item figure img {
+  width: 100%;
+}
+
+.page-service-item-1 figure {
+  height: 350px;
+}
+
+.page-service-item-2 figure {
+  height: 615px;
+}
+
+.page-service-item-5 figure {
+  height: 350px;
 }
 
 @keyframes buttonGradient {

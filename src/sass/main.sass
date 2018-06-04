@@ -714,6 +714,8 @@ header
 
 .page-service
 	padding: 40px 0
+	+media-breakpoint-down(sm)
+		padding: 0
 	&-excerpt
 		font-size: 10px
 	&-item
@@ -721,7 +723,6 @@ header
 		margin-bottom: 25px
 		border-radius: 65px
 		transition: .6s
-		overflow: hidden
 		&:hover
 			transform: scale(1.03)
 		&:hover figure
@@ -732,6 +733,7 @@ header
 			align-items: center
 			display: flex
 			height: 100%
+			overflow: hidden
 			&::before
 				position: absolute
 				content: ''
@@ -754,23 +756,66 @@ header
 				align-items: center
 				font-size: 3em
 				font-weight: 800
-				color: #ffffff
-				background-color: rgba(#000000,.3)
-				border-radius: 65px
+				background: linear-gradient(to bottom,rgba(255, 86, 203, 0.78),rgb(255, 202, 242))
+				border-radius: 75px
 				text-align: center
 				opacity: 0
 				transition: .4s
+				color: #ffffff
 			&:hover::after
 				opacity: 1
 			img
 				height: 100%
-		&-1
-				height: 350px
+		&-1, &-5
+			height: 350px
+			figure
+				img
+					width: 100%
+					height: auto
+					+media-breakpoint-down(md)
+						width: auto
+						height: 100%
+		&-3, &-4
+			height: 350px
 		&-2
-				height: 615px
+			height: 730px
+			+media-breakpoint-down(lg)
+				height: 730px
 		&-5
-				height: 350px
+			figure
+				img
+					+media-breakpoint-down(lg)
+						width: auto
+						height: 100%
+		&-1, &-2, &-3, &-4, &-5
+			+media-breakpoint-down(md)
+				height: 300px
+		&-2, &-3, &-4
+			figure
+				img
+					+media-breakpoint-down(md)
+						width: 100%
+						height: auto
+					+media-breakpoint-down(xs)
+						width: auto
+						height: 100%
 
+.gallery
+	padding: 60px 0
+	&-item
+		height: 300px
+		margin-bottom: 15px
+		padding-left: 0
+		width: 100%
+		&:not(:nth-child(3n))
+			padding-right: 15px
+		figure
+			width: 100%
+			height: 300px
+			border-radius: 25px
+			overflow: hidden
+			img
+				height: 100%
 
 
 @keyframes buttonGradient

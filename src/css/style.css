@@ -297,7 +297,7 @@ html {
 
 html {
   -ms-overflow-style: scrollbar;
-  -webkit-tap-highlight-color: transparent;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
 body {
@@ -5982,7 +5982,7 @@ html {
   bottom: 0px;
   left: 0px;
   display: none;
-  background: linear-gradient(transparent, black);
+  background: linear-gradient(rgba(0, 0, 0, 0), black);
   width: 100%;
 }
 
@@ -11663,6 +11663,12 @@ header.other-page {
   padding: 40px 0;
 }
 
+@media (max-width: 767px) {
+  .page-service {
+    padding: 0;
+  }
+}
+
 .page-service-excerpt {
   font-size: 10px;
 }
@@ -11672,7 +11678,6 @@ header.other-page {
   margin-bottom: 25px;
   border-radius: 65px;
   transition: .6s;
-  overflow: hidden;
 }
 
 .page-service-item:hover {
@@ -11689,6 +11694,7 @@ header.other-page {
   align-items: center;
   display: flex;
   height: 100%;
+  overflow: hidden;
 }
 
 .page-service-item figure::before {
@@ -11715,12 +11721,12 @@ header.other-page {
   align-items: center;
   font-size: 3em;
   font-weight: 800;
-  color: #ffffff;
-  background-color: rgba(0, 0, 0, 0.3);
-  border-radius: 65px;
+  background: linear-gradient(to bottom, rgba(255, 86, 203, 0.78), #ffcaf2);
+  border-radius: 75px;
   text-align: center;
   opacity: 0;
   transition: .4s;
+  color: #ffffff;
 }
 
 .page-service-item figure:hover::after {
@@ -11731,16 +11737,87 @@ header.other-page {
   height: 100%;
 }
 
-.page-service-item-1 {
+.page-service-item-1, .page-service-item-5 {
+  height: 350px;
+}
+
+.page-service-item-1 figure img, .page-service-item-5 figure img {
+  width: 100%;
+  height: auto;
+}
+
+@media (max-width: 991px) {
+  .page-service-item-1 figure img, .page-service-item-5 figure img {
+    width: auto;
+    height: 100%;
+  }
+}
+
+.page-service-item-3, .page-service-item-4 {
   height: 350px;
 }
 
 .page-service-item-2 {
-  height: 615px;
+  height: 730px;
 }
 
-.page-service-item-5 {
-  height: 350px;
+@media (max-width: 1199px) {
+  .page-service-item-2 {
+    height: 730px;
+  }
+}
+
+@media (max-width: 1199px) {
+  .page-service-item-5 figure img {
+    width: auto;
+    height: 100%;
+  }
+}
+
+@media (max-width: 991px) {
+  .page-service-item-1, .page-service-item-2, .page-service-item-3, .page-service-item-4, .page-service-item-5 {
+    height: 300px;
+  }
+}
+
+@media (max-width: 991px) {
+  .page-service-item-2 figure img, .page-service-item-3 figure img, .page-service-item-4 figure img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+@media (max-width: 575px) {
+  .page-service-item-2 figure img, .page-service-item-3 figure img, .page-service-item-4 figure img {
+    width: auto;
+    height: 100%;
+  }
+}
+
+.gallery {
+  padding: 60px 0;
+}
+
+.gallery-item {
+  height: 300px;
+  margin-bottom: 15px;
+  padding-left: 0;
+  width: 100%;
+}
+
+.gallery-item:not(:nth-child(3n)) {
+  padding-right: 15px;
+}
+
+.gallery-item figure {
+  width: 100%;
+  height: 300px;
+  border-radius: 25px;
+  overflow: hidden;
+}
+
+.gallery-item figure img {
+  height: 100%;
 }
 
 @keyframes buttonGradient {

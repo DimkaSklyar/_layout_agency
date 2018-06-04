@@ -297,7 +297,7 @@ html {
 
 html {
   -ms-overflow-style: scrollbar;
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-tap-highlight-color: transparent;
 }
 
 body {
@@ -5982,7 +5982,7 @@ html {
   bottom: 0px;
   left: 0px;
   display: none;
-  background: linear-gradient(rgba(0, 0, 0, 0), black);
+  background: linear-gradient(transparent, black);
   width: 100%;
 }
 
@@ -10369,12 +10369,14 @@ html {
   top: 29px;
 }
 
-.portfolio-item:hover {
+.portfolio-item:hover,
+.page-service-item:hover {
   box-shadow: 0 5px 20px 2px rgba(251, 91, 246, 0.29);
   background: linear-gradient(to bottom, #ffccef, #fbf3f9);
 }
 
-.portfolio-item:hover .hov-scale-fix {
+.portfolio-item:hover .hov-scale-fix,
+.page-service-item:hover .hov-scale-fi {
   transform: scale(1.05);
 }
 
@@ -10384,7 +10386,9 @@ html {
 }
 
 .portfolio-item:hover:before,
-.portfolio-item:hover:after {
+.portfolio-item:hover:after,
+.page-service-item:hover:before,
+.page-service-item:hover:after {
   display: block;
   content: "";
   position: absolute;
@@ -10396,7 +10400,8 @@ html {
   animation: 1s clockwise infinite;
 }
 
-.portfolio-item:hover:after {
+.portfolio-item:hover:after,
+.page-service-item:hover:after {
   background: #f3ce5e;
   animation: 2s counterclockwise infinite;
 }
@@ -11662,28 +11667,79 @@ header.other-page {
   font-size: 10px;
 }
 
-.page-service-item figure {
+.page-service-item {
+  position: relative;
+  margin-bottom: 25px;
   border-radius: 65px;
+  transition: .6s;
+  overflow: hidden;
+}
+
+.page-service-item:hover {
+  transform: scale(1.03);
+}
+
+.page-service-item:hover figure {
+  background: linear-gradient(to bottom, #ffccef, #fbf3f9);
+}
+
+.page-service-item figure {
+  border-radius: 75px;
   justify-content: center;
   align-items: center;
-  overflow: hidden;
   display: flex;
-  width: 100%;
+  height: 100%;
+}
+
+.page-service-item figure::before {
+  position: absolute;
+  content: '';
+  top: 15px;
+  bottom: 15px;
+  left: 17px;
+  right: 17px;
+  border: 4px solid #ffffff;
+  border-radius: 65px;
+  z-index: 1;
+}
+
+.page-service-item figure::after {
+  position: absolute;
+  content: attr(data-value);
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 3em;
+  font-weight: 800;
+  color: #ffffff;
+  background-color: rgba(0, 0, 0, 0.3);
+  border-radius: 65px;
+  text-align: center;
+  opacity: 0;
+  transition: .4s;
+}
+
+.page-service-item figure:hover::after {
+  opacity: 1;
 }
 
 .page-service-item figure img {
-  width: 100%;
+  height: 100%;
 }
 
-.page-service-item-1 figure {
+.page-service-item-1 {
   height: 350px;
 }
 
-.page-service-item-2 figure {
+.page-service-item-2 {
   height: 615px;
 }
 
-.page-service-item-5 figure {
+.page-service-item-5 {
   height: 350px;
 }
 

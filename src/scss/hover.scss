@@ -1,9 +1,11 @@
-.portfolio-item:hover {
+.portfolio-item:hover,
+.page-service-item:hover {
   box-shadow: 0 5px 20px 2px rgba(251,91,246,.29);
 	background: linear-gradient(to bottom,#ffccef,#fbf3f9);
 }
 
-.portfolio-item:hover .hov-scale-fix {
+.portfolio-item:hover .hov-scale-fix,
+.page-service-item:hover .hov-scale-fi{
 	transform: scale(1.05)
 }
 
@@ -13,7 +15,9 @@
 }
 
 .portfolio-item:hover:before,
-.portfolio-item:hover:after {
+.portfolio-item:hover:after,
+.page-service-item:hover:before,
+.page-service-item:hover:after {
   display: block;
   content: "";
   position: absolute;
@@ -26,7 +30,8 @@
 
 }
 
-.portfolio-item:hover:after {
+.portfolio-item:hover:after,
+.page-service-item:hover:after {
   background: #f3ce5e;
   animation: 2s counterclockwise infinite;
 }

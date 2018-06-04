@@ -717,23 +717,58 @@ header
 	&-excerpt
 		font-size: 10px
 	&-item
+		position: relative
+		margin-bottom: 25px
+		border-radius: 65px
+		transition: .6s
+		overflow: hidden
+		&:hover
+			transform: scale(1.03)
+		&:hover figure
+			background: linear-gradient(to bottom,#ffccef,#fbf3f9)
 		figure
-			border-radius: 65px
+			border-radius: 75px
 			justify-content: center
 			align-items: center
-			overflow: hidden
 			display: flex
-			width: 100%
+			height: 100%
+			&::before
+				position: absolute
+				content: ''
+				top: 15px
+				bottom: 15px
+				left: 17px
+				right: 17px
+				border: 4px solid #ffffff
+				border-radius: 65px
+				z-index: 1
+			&::after
+				position: absolute
+				content: attr(data-value)
+				top: 0
+				left: 0
+				bottom: 0
+				right: 0
+				display: flex
+				justify-content: center
+				align-items: center
+				font-size: 3em
+				font-weight: 800
+				color: #ffffff
+				background-color: rgba(#000000,.3)
+				border-radius: 65px
+				text-align: center
+				opacity: 0
+				transition: .4s
+			&:hover::after
+				opacity: 1
 			img
-				width: 100%
+				height: 100%
 		&-1
-			figure
 				height: 350px
 		&-2
-			figure
 				height: 615px
 		&-5
-			figure
 				height: 350px
 
 

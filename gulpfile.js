@@ -67,6 +67,7 @@ gulp.task('js', function() {
 			'src/libs/jquery.easing/js/jquery.easing.min.js',
 			'src/libs/skitter-slideshow/dist/jquery.skitter.min.js',
 			'src/libs/owl.carousel/dist/owl.carousel.min.js',
+			'src/libs/magnific-popup/dist/jquery.magnific-popup.min.js',
 			'src/js/common.js', // Always at the end
 			])
 		.pipe(concat('scripts.min.js'))

@@ -297,7 +297,7 @@ html {
 
 html {
   -ms-overflow-style: scrollbar;
-  -webkit-tap-highlight-color: transparent;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
 body {
@@ -5982,7 +5982,7 @@ html {
   bottom: 0px;
   left: 0px;
   display: none;
-  background: linear-gradient(transparent, black);
+  background: linear-gradient(rgba(0, 0, 0, 0), black);
   width: 100%;
 }
 
@@ -10992,7 +10992,7 @@ img.mfp-img {
 body {
   background-color: #ffffff;
   font-family: "MontserratAlternates", sans-serif;
-  overflow-x: none;
+  overflow-x: hidden;
 }
 
 a:link {
@@ -11469,7 +11469,7 @@ header.other-page {
 }
 
 .service-items .item-6 {
-  background: url("../img/icons/seo.png") no-repeat 50% 50%;
+  background: url("../img/icons/iseo.png") no-repeat 50% 50%;
   background-size: 65%;
   background-position: 50% 50%;
 }
@@ -12353,6 +12353,95 @@ header.other-page {
   height: 100%;
   border-radius: 25px;
   position: relative;
+}
+
+.gallery h2 {
+  text-align: center;
+  text-transform: uppercase;
+  padding-bottom: 30px;
+  background: linear-gradient(to right, #cf38ef, #f82e6f);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.page-service-custom {
+  padding: 60px 0 0;
+}
+
+.page-service-custom .container {
+  padding-bottom: 40px;
+}
+
+.page-service-custom .container::before {
+  content: '';
+  position: absolute;
+  height: 2px;
+  width: 100%;
+  bottom: 0;
+  background: linear-gradient(to right, #cf38ef, #f82e6f);
+  border-radius: 2px;
+}
+
+.page-service-custom figure {
+  overflow: hidden;
+  border-radius: 65px;
+  position: relative;
+  margin: 0 auto;
+}
+
+.page-service-custom figure img {
+  height: 100%;
+}
+
+@media (max-width: 1199px) {
+  .page-service-custom figure {
+    height: 100%;
+  }
+}
+
+@media (max-width: 767px) {
+  .page-service-custom figure {
+    height: 400px;
+  }
+}
+
+@media (max-width: 575px) {
+  .page-service-custom figure {
+    height: 300px;
+  }
+}
+
+.page-service-custom figure::before {
+  content: '';
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  bottom: 15px;
+  left: 15px;
+  border: 4px solid #ffffff;
+  border-radius: 55px;
+  z-index: 1;
+}
+
+.page-service-custom .content-wrap {
+  padding-left: 30px;
+  position: relative;
+}
+
+.page-service-custom .content-wrap li {
+  margin-bottom: 7px;
+}
+
+.page-service-custom .col-img {
+  flex: 0;
+}
+
+.service-gallery {
+  padding-top: 30px;
+}
+
+.m-0 {
+  padding-left: 40px;
 }
 
 @keyframes buttonGradient {

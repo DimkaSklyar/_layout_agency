@@ -6,7 +6,7 @@
 body
 	background-color: #ffffff
 	font-family: $default-font
-	overflow-x: none
+	overflow-x: hidden
 a
 	&:link
 		color: $color-text
@@ -286,7 +286,7 @@ header
 			background-size: 65%
 			background-position: 50% 50%
 		.item-6
-			background: url('../img/icons/seo.png') no-repeat 50% 50%
+			background: url('../img/icons/iseo.png') no-repeat 50% 50%
 			background-size: 65%
 			background-position: 50% 50%
 	&-decor-section
@@ -855,10 +855,62 @@ header
 				height: 100%
 				border-radius: 25px
 				position: relative
+	h2
+		text-align: center
+		text-transform: uppercase
+		padding-bottom: 30px
+		background: linear-gradient(to right,$color-1, $color-2)
+		-webkit-background-clip: text
+		-webkit-text-fill-color: transparent
 
+.page-service-custom
+	padding: 60px 0 0
+	.container
+		padding-bottom: 40px
+		&::before
+			content: ''
+			position: absolute
+			height: 2px
+			width: 100%
+			bottom: 0
+			background: linear-gradient(to right,$color-1, $color-2)
+			border-radius: 2px
+	figure
+		overflow: hidden
+		border-radius: 65px
+		position: relative
+		margin: 0 auto
+		img
+			height: 100%
+		+media-breakpoint-down(lg)
+			height: 100%
+		+media-breakpoint-down(sm)
+			height: 400px
+		+media-breakpoint-down(xs)
+			height: 300px
+		&::before
+			content: ''
+			position: absolute
+			top: 15px
+			right: 15px
+			bottom: 15px
+			left: 15px
+			border: 4px solid #ffffff
+			border-radius: 55px
+			z-index: 1
+	.content-wrap
+		padding-left: 30px
+		position: relative
+		li
+			margin-bottom: 7px
+	.col-img
+		flex: 0
 
+.service-gallery
+	padding-top: 30px
 
-
+.m-0
+	padding-left: 40px
 @keyframes buttonGradient
 	0%
 		background-position: 0 50%

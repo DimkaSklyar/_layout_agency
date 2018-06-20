@@ -11830,6 +11830,19 @@ header.other-page {
   text-align: center;
 }
 
+.scale {
+  display: block;
+  transition: .4s;
+}
+
+.scale:hover {
+  transform: scale(1.1);
+}
+
+.scale:hover .service-item {
+  border-width: 2px;
+}
+
 .page-footer {
   background: url("../img/bg-footer.png") no-repeat;
   background-size: cover;

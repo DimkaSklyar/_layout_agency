@@ -27,19 +27,21 @@ $(document).ready(function () {
 		}
 	})
 	
-	
-	
-	// var windowHeight = $(window).height();
-	// $(document).on('scroll', function() {
-	// 	$('#service-animate').each(function() {
-	// 		var self = $(this),
-	// 		height = self.offset().top;
-	// 		if ($(document).scrollTop() + windowHeight >= height) {
-	// 			self.addClass('fadeInLeft').css({'animation-duration':'2s'})
-	// 		}
-	// 	});
-	// });
-	
+	showAnimate('#service-animate', 'fadeInLeft', '2s', 20);
+
+	function showAnimate(block, nameAnimation, durationAnimate, borderShow) {
+
+	var windowHeight = $(window).height();
+	$(document).on('scroll', function() {
+		$(block).each(function() {
+			var self = $(this),
+			height = self.offset().top + borderShow;
+			if ($(document).scrollTop() + windowHeight >= height) {
+				self.addClass(nameAnimation).css({'animation-duration': durationAnimate})
+			}
+		});
+	});
+	}
 	
 	// mobile menu
 	var touch = $('#touch-menu');

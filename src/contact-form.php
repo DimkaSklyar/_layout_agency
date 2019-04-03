@@ -1,7 +1,7 @@
 <?php 
 if($_POST) 
 { 
-$to = "cactus8@yandex.ru"; //куда отправлять письмо 
+$to = "examle@example.ru"; //куда отправлять письмо 
 $subject = "Вопрос с сайта"; //тема 
 $message = '<span style="font-weight:bold;color:#ff6600;font-size:18px;"><i>Обратная связь!</i> </span><br><br> 
 Имя: <span style="font-weight:bold;color:#339900;">'.$_POST['contact-name'].'</span><br> 

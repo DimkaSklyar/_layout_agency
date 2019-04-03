@@ -10383,6 +10383,7 @@ html {
 .portfolio-item:hover p {
   color: #fff;
   border: 4px solid #ffffff;
+  text-shadow: 1px 0px 20px #ff0052;
 }
 
 .portfolio-item:hover:before,
